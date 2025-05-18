@@ -28,3 +28,14 @@ Preferi utilizar o K0S pela proposta multiplataforma e pela simplicidade dele. P
 
 Para acessar a console da máquina: `sudo virsh console k0s`
 
+# Script
+
+**Instalação K0S:**
+
+```bash
+curl -sSf https://get.k0s.sh | sudo sh && \
+sudo k0s install controller --single && \
+sudo k0s start && \
+sleep 60 && \
+sudo k0s kubectl get nodes
+```

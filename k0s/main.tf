@@ -24,11 +24,6 @@ resource "libvirt_volume" "boot" {
   }
 }
 
-# resource "local_file" "this" {
-#   filename = "/usr/local/share/k0s/README"
-#   source = "${path.module}/README.md"
-# }
-
 resource "libvirt_domain" "this" {
   name = "k0s"
   vcpu = 2
@@ -57,6 +52,4 @@ resource "libvirt_domain" "this" {
   network_interface {
     network_id = libvirt_network.this.id
   }
-
-  # depends_on = [ local_file.this ]
 }
