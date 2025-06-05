@@ -28,6 +28,7 @@ resource "libvirt_domain" "this" {
   name = "k0s"
   vcpu = 2
   memory = 4096
+  running = false
 
   cloudinit = libvirt_cloudinit_disk.this.id
 
@@ -35,12 +36,6 @@ resource "libvirt_domain" "this" {
     volume_id = libvirt_volume.boot.id
     scsi      = "true"
   }
-
-  # filesystem {
-  #   source   = "${path.module}/shared"
-  #   target   = "/usr/local/share/k0s"
-  #   readonly = false
-  # }
 
   console {
     type        = "pty"
