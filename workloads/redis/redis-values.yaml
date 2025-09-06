@@ -1,0 +1,12 @@
+# redis-helm-values.yaml
+## Helm values for Redis - use with: helm install redis bitnami/redis -f redis-helm-values.yaml
+architecture: standalone
+auth:
+  enabled: false
+master:
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "100m"
