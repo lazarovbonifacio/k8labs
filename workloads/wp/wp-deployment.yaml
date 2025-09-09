@@ -27,9 +27,6 @@ spec:
         - name: wordpress
           image: wordpress:php8.2-apache
           resources:
-            requests:
-              cpu: 300m
-              memory: 256Mi
             limits:
               cpu: 300m
               memory: 256Mi
