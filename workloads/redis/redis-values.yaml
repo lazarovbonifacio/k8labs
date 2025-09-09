@@ -6,7 +6,3 @@ auth:
 master:
   persistence:
     enabled: false
-  resources:
-    requests:
-      memory: "256Mi"
-      cpu: "100m"
