@@ -11,6 +11,7 @@ primary:
   persistence:
     enabled: true
     size: 10Gi
+    storageClass: "microk8s-hostpath"
   resources:
     requests:
       memory: "512Mi"
